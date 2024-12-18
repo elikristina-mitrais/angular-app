@@ -1,0 +1,23 @@
+<div class="m-auto w-50">
+    <form [formGroup]="sigupForm">
+        <div class="row mb-3">
+            <label class="col-3">Username</label>
+            <input class="col-6" type="text" formControlName="userName">
+        </div>
+        <div class="row mb-3">
+            <label class="col-3">First Name</label>
+            <input class="col-6" type="text" formControlName="firstName">
+        </div>
+        <div class="row mb-3">
+            <label class="col-3">Last Name</label>
+            <input class="col-6" type="text" formControlName="lastName">
+        </div>
+        <div class="row mb-3">
+            <label class="col-3">Password</label>
+            <input class="col-6" type="password" formControlName="password" placeholder="min 6 chars">
+        </div>
+        <div class="row mb-3">
+            <button class="col-12 btn btn-primary" type="button" (click)="onSubmit()" [disabled]="!sigupForm.valid">SignUp</button>
+        </div>
+    </form>
+</div>

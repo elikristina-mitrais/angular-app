@@ -1,0 +1,21 @@
+<div class="login-overlay" *ngIf="isShow"></div>
+<div class="login-content p-2" *ngIf="isShow">
+    <form [formGroup]="loginForm" (submit)="onSubmit()">
+    <div class="card">
+        <div class="card-header fw-bold">Login Form</div>
+        <div class="card-body">
+            <div class="row mb-3">
+                <input class="form-control" type="text" formControlName="username" placeholder="username">
+            </div>
+
+            <div class="row">
+                <input class="form-control" type="password" formControlName="password" placeholder="password">
+            </div>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Signin</button>
+            <button type="button" class="btn btn-danger float-end" (click)="hidePopup()">Cancel</button>
+        </div>
+    </div>
+    </form>
+</div>

@@ -1,0 +1,14 @@
+<div class="popup-overlay" *ngIf="isShow"></div>
+<div class="popup-content p-2" *ngIf="isShow">
+    <div class="card">
+        <div class="card-header fw-bold">Confirmation</div>
+        <div class="card-body">
+            <span *ngIf="typeSelected === 'remove'">Are you sure to remove this data?</span>
+            <span *ngIf="typeSelected === 'update'">Are you sure to update the status?</span>
+        </div>
+        <div class="card-footer">
+            <button type="button" class="btn btn-primary" (click)="proceedConfirm()">Yes</button>
+            <button type="button" class="btn btn-danger float-end" (click)="hidePopup()">No</button>
+        </div>
+    </div>
+</div>

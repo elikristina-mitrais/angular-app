@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "node dist/angular-app/server/server.mjs",
     "build": "ng build --configuration staging",
     "build:staging": "ng build --configuration staging",
     "build:prod": "ng build --configuration production",
